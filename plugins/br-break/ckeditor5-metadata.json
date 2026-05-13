@@ -1,0 +1,29 @@
+{
+	"plugins": [
+		{
+			"name": "Br Break",
+			"className": "BrBreak",
+			"description": "Insert a new line in full width. Very useful with an image positioning floating left or right.",
+			"docs": "features/br-break.html",
+			"path": "src/brbreak.js",
+			"uiComponents": [
+				{
+					"type": "Button",
+					"name": "brBreak",
+					"iconPath": "theme/icons/brbreak.svg"
+				}
+			],
+			"htmlOutput": [
+				{
+					"elements": "div",
+					"classes": "br-break",
+					"styles": "br-break-after"
+				},
+				{
+					"elements": "span",
+					"styles": "display"
+				}
+			]
+		}
+	]
+}
