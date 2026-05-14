@@ -1,0 +1,11 @@
+{
+  "name": "@scbd/ckeditor5-alert",
+  "version": "1.0.0",
+  "description": "CKEditor 5 plugin for Bootstrap-style alerts",
+  "main": "src/index.js",
+  "author": "CKSource",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {}
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Alert",
+  "className": "Alert",
+  "description": "Insert Bootstrap-style alerts",
+  "docs": "features/alert.html",
+  "path": "src/alert.js",
+  "uiComponents": [
+    {
+      "type": "SplitButton",
+      "name": "alert",
+      "iconPath": "theme/icons/alert.svg",
+      "tooltip": "Insert alert"
+    }
+  ],
+  "htmlOutput": [
+    {
+      "elements": "div",
+      "classes": "alert",
+      "styles": "alert-{type}"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+.ck-alert {
+    display: flow-root;
+    border-left: 4px solid;
+    padding: 8px 16px;
+    margin: 16px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.ck-alert-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.ck-alert-title::before {
+    font-style: normal;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.ck-alert-content {
+    font-size: 14px;
+}
+
+.ck-alert-content p:first-child { margin-top: 0; }
+.ck-alert-content p:last-child  { margin-bottom: 0; }
+
+/* Note — blue */
+.ck-alert-note                          { border-color: #0969da; background-color: #dff0ff; }
+.ck-alert-note .ck-alert-title          { color: #0969da; }
+.ck-alert-note .ck-alert-title::before  { content: 'ℹ️'; }
+
+/* Tip — green */
+.ck-alert-tip                           { border-color: #1a7f37; background-color: #dafbe1; }
+.ck-alert-tip .ck-alert-title           { color: #1a7f37; }
+.ck-alert-tip .ck-alert-title::before   { content: '💡'; }
+
+/* Important — purple */
+.ck-alert-important                          { border-color: #8250df; background-color: #fbefff; }
+.ck-alert-important .ck-alert-title          { color: #8250df; }
+.ck-alert-important .ck-alert-title::before  { content: '🔔'; }
+
+/* Warning — amber */
+.ck-alert-warning                          { border-color: #9a6700; background-color: #fff8c5; }
+.ck-alert-warning .ck-alert-title          { color: #9a6700; }
+.ck-alert-warning .ck-alert-title::before  { content: '⚠️'; }
+
+/* Caution — red */
+.ck-alert-caution                          { border-color: #cf222e; background-color: #ffebe9; }
+.ck-alert-caution .ck-alert-title          { color: #cf222e; }
+.ck-alert-caution .ck-alert-title::before  { content: '🛑'; }
+
+/* Editor tweaks */
+.ck-content .ck-alert .ck-editor__editable {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0;
+    min-height: unset;
+}
