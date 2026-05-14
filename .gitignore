@@ -21,7 +21,6 @@ app/views/mockups
 .vscode
 i18n-build
 TestCases
-package-lock.json
 sourceMap
 dist
 build
