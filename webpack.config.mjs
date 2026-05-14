@@ -3,14 +3,14 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
-'use strict';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { loaders } from '@ckeditor/ckeditor5-dev-utils';
+import TerserWebpackPlugin from 'terser-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-/* eslint-env node */
-
-const path = require( 'path' );
-const { loaders } = require( '@ckeditor/ckeditor5-dev-utils' );
-const TerserWebpackPlugin = require( 'terser-webpack-plugin' );
-const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
+const __filename = fileURLToPath( import.meta.url );
+const __dirname = path.dirname( __filename );
 
 const ckCorePackages = [
 	'ckeditor5-core',
@@ -22,7 +22,7 @@ const ckCorePackages = [
 	'ckeditor5-editor-multi-root',
 ];
 
-module.exports = {
+export default {
 	devtool: 'source-map',
 	performance: { hints: false },
 
