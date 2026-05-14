@@ -7,8 +7,7 @@
  * @module br-break/brbreak
  */
 
-import { Plugin } from 'ckeditor5/src/core';
-import { Widget } from 'ckeditor5/src/widget';
+import { Plugin, Widget } from 'ckeditor5';
 import BrBreakEditing from './brbreakediting';
 import BrBreakUI from './brbreakui';
 

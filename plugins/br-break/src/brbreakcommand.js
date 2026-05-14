@@ -7,8 +7,7 @@
  * @module br-break/brbreakcommand
  */
 
-import { Command } from 'ckeditor5/src/core';
-import { findOptimalInsertionRange } from 'ckeditor5/src/widget';
+import { Command, findOptimalInsertionRange } from 'ckeditor5';
 
 /**
  * The br break command.

@@ -7,8 +7,7 @@
  * @module br-break/brbreakui
  */
 
-import { Plugin } from 'ckeditor5/src/core';
-import { ButtonView } from 'ckeditor5/src/ui';
+import { Plugin, ButtonView } from 'ckeditor5';
 
 import brBreakIcon from '../theme/icons/brbreak.svg';
 
