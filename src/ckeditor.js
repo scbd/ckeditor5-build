@@ -40,6 +40,8 @@ import {
 	List,
 	ListProperties,
 	MediaEmbed,
+	MediaEmbedResize,
+	MediaEmbedStyle,
 	MediaEmbedToolbar,
 	PageBreak,
 	Paragraph,
@@ -67,6 +69,7 @@ import {
 //custom plugins
 import BrBreak from '../plugins/br-break/src/brbreak.js';
 import Alert from '../plugins/alert/src/alert.js';
+import Bookmark from '../plugins/bookmark/src/bookmark.js';
 
 // Import custom CSS
 import '../plugins/alert/theme/alert.css';
@@ -108,6 +111,8 @@ const builtinPlugins = [
 	List,
 	ListProperties,
 	MediaEmbed,
+	MediaEmbedResize,
+	MediaEmbedStyle,
 	MediaEmbedToolbar,
 	PageBreak,
 	Paragraph,
@@ -133,7 +138,8 @@ const builtinPlugins = [
 
 
 	BrBreak,
-	Alert
+	Alert,
+	Bookmark
 ];
 
 // Editor configuration.
@@ -148,7 +154,8 @@ const defaultConfig = {
 			'imageInsert', 'mediaEmbed', '|',
 			'horizontalLine', '|',
 			'removeFormat', 'undo', 'redo', '|',
-			'pageBreak', 'brBreak', 'alert'
+			'pageBreak', 'brBreak', 'alert', 'bookmark', '|',
+			'sourceEditing'
 		]
 	},
 	language: 'en',
@@ -160,6 +167,22 @@ const defaultConfig = {
 			'imageStyle:block',
 			'imageStyle:side',
 			'linkImage'
+		]
+	},
+	mediaEmbed: {
+		toolbar: [
+			'mediaEmbed:alignBlockLeft',
+			'mediaEmbed:alignCenter',
+			'mediaEmbed:alignBlockRight',
+			'|',
+			'resizeMediaEmbed'
+		],
+		resizeOptions: [
+			{ name: 'resizeMediaEmbed:original', value: null, icon: 'original' },
+			{ name: 'resizeMediaEmbed:25', value: '25', icon: 'small' },
+			{ name: 'resizeMediaEmbed:50', value: '50', icon: 'medium' },
+			{ name: 'resizeMediaEmbed:75', value: '75', icon: 'large' },
+			{ name: 'resizeMediaEmbed:custom', value: 'custom', icon: 'custom' }
 		]
 	},
 	table: {

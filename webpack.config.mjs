@@ -5,12 +5,14 @@
 
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
 import { loaders } from '@ckeditor/ckeditor5-dev-utils';
 import TerserWebpackPlugin from 'terser-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const __filename = fileURLToPath( import.meta.url );
 const __dirname = path.dirname( __filename );
+const require = createRequire( import.meta.url );
 
 const ckCorePackages = [
 	'ckeditor5-core',
@@ -32,10 +34,14 @@ export default {
 	},
 
 	resolve: {
+		// Force every dependent package to resolve these "core" CKEditor 5 packages to the same
+		// physical copy, wherever npm happened to place it (hoisted at the top level or nested
+		// under ckeditor5/node_modules) — otherwise duplicate instances break class checks like
+		// `instanceof Plugin` across packages.
 		alias: Object.fromEntries(
 			ckCorePackages.map( pkg => [
 				`@ckeditor/${ pkg }`,
-				path.resolve( __dirname, `node_modules/ckeditor5/node_modules/@ckeditor/${ pkg }` )
+				path.dirname( require.resolve( `@ckeditor/${ pkg }/package.json` ) )
 			] )
 		)
 	},

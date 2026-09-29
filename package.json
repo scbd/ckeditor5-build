@@ -2,12 +2,15 @@
   "name": "@scbd/ckeditor5-build-inline-full",
   "author": "SCBD",
   "description": "A custom CKEditor 5 build with most plugins",
-  "version": "48.1.0",
+  "version": "48.1.1",
   "license": "SEE LICENSE IN LICENSE.md",
   "private": false,
+  "files": [
+    "build"
+  ],
   "devDependencies": {
-    "ckeditor5": "^48.1.0",
     "@ckeditor/ckeditor5-dev-utils": "^55.5.0",
+    "ckeditor5": "^48.5.2",
     "css-loader": "^7.1.4",
     "mini-css-extract-plugin": "^2.10.2",
     "postcss-loader": "^8.2.1",
@@ -24,8 +27,9 @@
     "build:dev": "rm -rf ./build && webpack --mode development",
     "build": "rm -rf ./build && webpack --mode production",
     "clean": "rm -rf ./build",
-    "publish": "npm publish . --access public",
+    "publish": "npm publish --access public",
     "build-publish": "npm run build && npm run publish",
-    "clean-reinstall": "rm -rf ./node_modules ./build && npm install"
+    "clean-reinstall": "rm -rf ./node_modules ./build && npm install",
+    "copy:oasis": "npm run build && mkdir -p ../oasis.cbd.int/node_modules/@scbd/ckeditor5-build-inline-full@$npm_package_version && cp build/*.js build/*.css build/*.map ../oasis.cbd.int/node_modules/@scbd/ckeditor5-build-inline-full@$npm_package_version/"
   }
 }
