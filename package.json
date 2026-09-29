@@ -2,7 +2,7 @@
   "name": "@scbd/ckeditor5-build-inline-full",
   "author": "SCBD",
   "description": "A custom CKEditor 5 build with most plugins",
-  "version": "48.1.1",
+  "version": "48.5.2",
   "license": "SEE LICENSE IN LICENSE.md",
   "private": false,
   "files": [
