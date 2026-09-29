@@ -1,0 +1,47 @@
+/*
+ * Selectors below double up the class (e.g. ".scbd-bookmark.scbd-bookmark") to outrank
+ * CKEditor's own ".ck-reset_all :not(...)" base reset, which resets padding/margin/width/
+ * background/border on everything under it and otherwise silently wins on specificity.
+ */
+.scbd-bookmark.scbd-bookmark {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2px;
+	border-radius: 3px;
+	background-color: #dff0ff;
+	color: #0969da;
+	vertical-align: middle;
+	cursor: default;
+}
+
+.scbd-bookmark__icon.scbd-bookmark__icon {
+	display: inline-flex;
+	width: 12px;
+	height: 12px;
+}
+
+.scbd-bookmark__icon svg {
+	width: 100%;
+	height: 100%;
+	fill: currentColor;
+}
+
+.scbd-bookmark-form.scbd-bookmark-form {
+	display: flex;
+	flex-direction: column;
+	gap: var(--ck-spacing-large);
+	padding: var(--ck-spacing-large);
+	width: 260px;
+}
+
+.scbd-bookmark-form__actions {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: var(--ck-spacing-standard);
+}
+
+.scbd-bookmark-form .scbd-button-remove.scbd-button-remove {
+	margin-right: auto;
+}

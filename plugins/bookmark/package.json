@@ -1,0 +1,11 @@
+{
+  "name": "@scbd/ckeditor5-bookmark",
+  "version": "1.0.0",
+  "description": "CKEditor 5 plugin for inserting and managing in-content bookmarks",
+  "main": "src/index.js",
+  "author": "SCBD",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {}
+}
