@@ -1,0 +1,21 @@
+{
+  "name": "Bookmark",
+  "className": "Bookmark",
+  "description": "Insert and manage in-content bookmarks (empty anchors)",
+  "docs": "features/bookmark.html",
+  "path": "src/bookmark.js",
+  "uiComponents": [
+    {
+      "type": "Button",
+      "name": "bookmark",
+      "iconPath": "theme/icons/bookmark.svg",
+      "tooltip": "Insert bookmark"
+    }
+  ],
+  "htmlOutput": [
+    {
+      "elements": "a",
+      "attributes": "id"
+    }
+  ]
+}
